@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> SkyNova Project </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="assets/css/mainB.css" />		
+		<link rel="icon" href="images/DroneIcon.png">		
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+			<header id="header">
+				<h1 id="logo">SkyNova</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="hov"><a>How it works</a>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>								
+							</ul>
+						</li>
+						<li class="hov"><a>Learn more</a>
+							<ul>
+								<li><a href="informations.html">Informations</a></li>
+								<li><a href="models.html">Models</a></li>
+							</ul>
+						</li>						
+						<li class="hov"><a>Language</a>
+							<ul>
+							  <li><a href="#"><img src="images/poland-26125_640.png" alt="flaga"> Polish</a></li>
+							  <li><a href="#"><img src="images/union-jack-1027898_640.jpg" alt="flaga1"> English</a></li>
+							  <li><a href="#"><img src="images/spain-28530_640.png" alt="flaga3"> Spanish</a></li>       
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Benefits</h2>
+						</header>
+					</div>
+					<a href="#one" class="goto-next scrolly">Next</a>
+				</section>
+
+                <!-- Two -->
+				<section id="one" class="spotlight style2 right">					
+					<h1 id="exm">Example: <br> Drone Hangar for Solar Panel Inspections</h1>
+						<div class="carousel">
+							<div class="slides next-button">
+								<div class="slide ">
+									
+										
+									<h1>Companion:</h1> <br>Solar Power Inc. (SPI)
+								</div>
+								<div class="slide ">
+									<h1>Scenario:</h1>
+
+									<br>Problem:<br> SPI manages multiple solar farms and needs to efficiently inspect and maintain its extensive solar panel arrays for optimal performance.
+								</div>
+								<div class="slide ">
+									<h1>Solution:</h1>
+
+									<br>Implementation:<br> SPI installs a drone hangar at one of its largest solar farms in California.
+								</div>
+								<div class="slide ">
+									<h1>Outcome:</h1>
+
+									<br>The drone hangar enhances SPI's ability to inspect and maintain solar panels efficiently, contributing to the company's sustainable energy initiatives.
+								</div>								
+								
+								<!-- Add more slides as needed -->
+							</div>
+						</div>
+					<a href="#two" class="goto-next scrolly">Next</a>						
+					</section>
+				
+				<section id="two" class="spotlight style2 right">
+
+				</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		
+
+			<script>
+				// JavaScript functions for carousel
+				let slidesContainer = document.querySelector('.slides');
+				let nextButton = document.querySelector('.next-button');
+				let slideWidth = document.querySelector('.slide').clientWidth; // Adjust if needed
+				let slideIndex = 0;
+
+				function showSlide(index) {
+				    slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+				}
+
+				nextButton.addEventListener('click', () => {
+				    if(slideIndex < slidesContainer.children.length - 2){
+				        slideIndex = slideIndex + 1;
+				    }else{
+				        slideIndex = 0;
+				    }
+				    console.log(slideIndex);
+				    showSlide(slideIndex);
+				});
+
+				// Initial slide display
+				showSlide(slideIndex);
+
+
+			</script>
+	</body>
+</html>
