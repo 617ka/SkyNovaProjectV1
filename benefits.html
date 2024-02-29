@@ -48,8 +48,75 @@
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
 
+				<section id="one" class="spotlight style2 bottom">		
+					<div id="image1"></div>		
+					<h1 id="exm">Drone hangars offer a range of benefits:</h1>
+						<div class="carousel">
+							<div class="slides next-button">
+
+								<div class="slide ">																			
+									<h1>1. Security:</h1> 
+									
+									<br>They provide a safe and secure environment for storing drones, reducing the risk of theft, vandalism, or damage.
+								</div>
+								<div class="slide ">
+									<h1>2. Weather Protection:</h1>
+
+									<br>Hangars shield drones from adverse weather conditions such as rain, wind, or extreme temperatures, helping to prolong their lifespan and maintain operational readiness.
+								</div>
+								<div class="slide ">
+									<h1>3. Maintenance Facilities:</h1>
+
+									<br>Equipped with maintenance areas, hangars enable routine servicing, repairs, and recharging of drones, ensuring they are always in optimal condition for missions.
+								</div>
+								<div class="slide ">
+									<h1>4. Organized Storage:</h1>
+
+									<br>With designated spaces for drones, batteries, spare parts, and other equipment, hangars facilitate efficient inventory management and easy access to resources, improving operational efficiency.
+								</div>	
+								<div class="slide ">
+									<h1>5. Charging Infrastructure:</h1>
+
+									<br>Hangars can be outfitted with charging stations or docking stations, allowing drones to recharge between missions autonomously, reducing downtime and enabling continuous operation.
+								</div>
+								<div class="slide ">
+									<h1>6. Centralized Operations:</h1>
+
+									<br>By centralizing drone operations in a hangar, organizations can streamline logistics, communication, and coordination, leading to more effective mission planning and execution.
+								</div>								
+								<div class="slide ">
+									<h1>7. Regulatory Compliance:</h1>
+
+									<br>Hangars provide a designated area for drone operations, helping organizations comply with aviation regulations, safety standards, and privacy concerns associated with drone usage.
+								</div>
+								<div class="slide ">
+									<h1>8. Scalability:</h1>
+
+									<br>Hangars are scalable and can accommodate a growing fleet of drones or changing operational needs, providing flexibility and adaptability to meet evolving requirements.
+								</div>
+								<div class="slide ">
+									<h1>9. Data Management:</h1>
+
+									<br>Integrated data management systems within hangars facilitate the storage, analysis, and sharing of data collected by drones, supporting informed decision-making and actionable insights.
+								</div>
+								<div class="slide ">
+									<h1>10. Customization and Integration:</h1>
+
+									<br>Hangars can be customized to suit specific industry needs and integrated with other technologies such as autonomous ground vehicles or sensor networks, enhancing overall capabilities and efficiency.
+								</div>
+								
+								<!-- Add more slides as needed -->
+							</div>
+						</div>
+						<div class="content">															
+							<p>In summary, drone hangars serve as essential infrastructure for optimizing drone operations, ensuring compliance with regulations, and maximizing the effectiveness of missions across various industries and applications.</p>						
+						</div>
+						<a href="#two" class="goto-next scrolly">Next</a>						
+					</section>
+			
+
                 <!-- Two -->
-				<section id="one" class="spotlight style2 right">					
+				<section id="two" class="spotlight style2 right">					
 					<h1 id="exm">Example: <br> Drone Hangar for Solar Panel Inspections</h1>
 						<div class="carousel">
 							<div class="slides next-button">
@@ -77,12 +144,9 @@
 								<!-- Add more slides as needed -->
 							</div>
 						</div>
-					<a href="#two" class="goto-next scrolly">Next</a>						
+					<a href="#three" class="goto-next scrolly">Next</a>						
 					</section>
 				
-				<section id="two" class="spotlight style2 right">
-
-				</section>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -97,21 +161,41 @@
 
 			<script>
 				// JavaScript functions for carousel
+				let imgArray = ['assets/images/1.png', 'assets/images/2.png', 'assets/images/3.png', 'assets/images/4.jpg', 'assets/images/5.jpg']
+
+				function renderImage(index) {
+					const imageContainer = document.getElementById('image1');
+					const img = document.createElement('img');
+					console.log(imageContainer);
+					img.src = imgArray[index];
+					imageContainer.innerHTML = '';
+					imageContainer.appendChild(img);
+				}
+
 				let slidesContainer = document.querySelector('.slides');
 				let nextButton = document.querySelector('.next-button');
 				let slideWidth = document.querySelector('.slide').clientWidth; // Adjust if needed
+				
 				let slideIndex = 0;
+				let currentImage = 0;
 
 				function showSlide(index) {
 				    slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
 				}
 
+				let image = document.getElementById('image1');
 				nextButton.addEventListener('click', () => {
 				    if(slideIndex < slidesContainer.children.length - 2){
 				        slideIndex = slideIndex + 1;
+						renderImage(currentImage);
+						currentImage++;
+						if(currentImage == imgArray.length){
+							currentImage=0;
+						}
 				    }else{
 				        slideIndex = 0;
 				    }
+
 				    console.log(slideIndex);
 				    showSlide(slideIndex);
 				});

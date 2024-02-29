@@ -2259,7 +2259,7 @@ input, select, textarea {
 		}
 
 	select {
-		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(255, 255, 255, 0.3)' /%3E%3C/svg%3E");
+		/*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(255, 255, 255, 0.3)' /%3E%3C/svg%3E");*/
 		background-size: 1.25rem;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
@@ -2981,7 +2981,7 @@ input, select, textarea {
 		}
 
 		.spotlight:nth-last-of-type(2) {
-			z-index: 2;
+			z-index: 2;			
 		}
 
 		.spotlight:nth-last-of-type(3) {
@@ -3456,7 +3456,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("../../images/Drone2.jpg");
+		background-image: url("images/ie/banner-overlay.png");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -4126,7 +4126,7 @@ input, select, textarea {
 
 	.hov:hover{
 		color: #e44c65 !important;
-			border-bottom-color: transparent;
+		border-bottom-color: transparent;
 	}
 
 	#logo{
@@ -4185,13 +4185,13 @@ input, select, textarea {
 
 
 
-	/* CSS for carousel*/
+	/* CSS for slides*/
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%; /* Set your desired width */
     left: 20%;
-   	top: 15%;
+   	top: 10%;
 
 }
 
@@ -4210,3 +4210,7 @@ input, select, textarea {
 /* Add styling for buttons, fonts, etc. */
 
 /* Hide overflow to prevent horizontal scrollbar */
+
+#one .content p{
+	margin: 0 10%;
+}
